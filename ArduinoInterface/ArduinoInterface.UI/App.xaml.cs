@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-
-namespace ArduinoInterface.UI;
+﻿namespace ArduinoInterface.UI;
 
 public partial class App : Application
 {

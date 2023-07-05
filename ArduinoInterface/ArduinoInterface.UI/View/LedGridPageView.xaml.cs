@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls.Primitives;
-
-namespace ArduinoInterface.UI.View;
+﻿namespace ArduinoInterface.UI.View;
 
 public partial class LedGridPageView : UserControl
 {
@@ -24,7 +22,7 @@ public partial class LedGridPageView : UserControl
             Console.WriteLine($"Clicked button at column {column}, row {row}");
 
             // Toggle the icon
-            toggleButton.Background = new SolidColorBrush(Colors.Red) { Opacity = 0.25 };
+            toggleButton.Background = new SolidColorBrush(Colors.Red) { Opacity = 0.3 };
             PackIcon packIcon = (PackIcon)toggleButton.Content;
             packIcon.Kind = packIcon.Kind == PackIconKind.LedOn ? PackIconKind.LedOff : PackIconKind.LedOn;
 

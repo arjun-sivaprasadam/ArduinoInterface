@@ -18,6 +18,9 @@
                 <ResourceDictionary Source="pack://application:,,,/UI/Buttons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
+            <converter:ColorToShadedGradientConverter x:Key="ColorToShadedGradientConverter"/>
+            <converter:ColorToShadeConverter x:Key="ColorToShadeConverter"/>
+            
             <DataTemplate DataType="{x:Type vm:LedGridPageViewModel}">
                 <view:LedGridPageView/>
             </DataTemplate>

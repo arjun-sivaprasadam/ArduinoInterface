@@ -1,8 +1,4 @@
-﻿using MaterialDesignThemes.Wpf;
-
-using System.Diagnostics;
-
-namespace ArduinoInterface.UI.View;
+﻿namespace ArduinoInterface.UI.View;
 
 public partial class MainPageView : Window
 {
