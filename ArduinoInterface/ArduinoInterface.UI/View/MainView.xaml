@@ -41,9 +41,11 @@
                 <materialDesign:ColorZone
                     Padding="2"
                     materialDesign:ElevationAssist.Elevation="Dp4"
+                    Background="{StaticResource MaterialDesignDarkSeparatorBackground}"
                     DockPanel.Dock="Top"
                     MouseDoubleClick="Window_MouseDoubleClick"
-                    MouseDown="WindowDrag_MouseDown">
+                    MouseDown="WindowDrag_MouseDown"
+                    Opacity="0.9">
                     <DockPanel>
                         <StackPanel Orientation="Horizontal">
                             <!--<materialDesign:PackIcon Kind="BatteryHigh" VerticalAlignment="Center" Width="28" Height="28" Margin="5,2,2,2" />-->
@@ -87,48 +89,44 @@
                             Text="" />
                     </DockPanel>
                 </materialDesign:ColorZone>
-                <Separator
-                    MaxHeight="1"
-                    VerticalAlignment="Top"
-                    DockPanel.Dock="Top"
-                    Opacity="0.2"
-                    Style="{StaticResource MaterialDesignLightSeparator}" />
 
                 <!--  Page Space Model 3 ================================================================================================================================================  -->
 
-                <ListBox
-                    x:Name="MenuBox"
-                    Margin="0,-25,0,5"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"
-                    HorizontalContentAlignment="Stretch"
-                    DockPanel.Dock="Top"
-                    ItemsSource="{Binding AppViews}"
-                    SelectedIndex="{Binding SelectedIndex}"
-                    SelectedItem="{Binding CurrentView, UpdateSourceTrigger=PropertyChanged}">
-                    <ListBox.Style>
-                        <Style BasedOn="{StaticResource ResourceKey=MaterialDesignToolToggleFlatListBox}" TargetType="ListBox" />
-                    </ListBox.Style>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <WrapPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                                <TextBlock
-                                    Margin="10,0"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    Text="{Binding Name}"
-                                    TextAlignment="Center" />
-                                <materialDesign:PackIcon
-                                    Margin="5,0"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    HorizontalContentAlignment="Center"
-                                    VerticalContentAlignment="Center"
-                                    Kind="{Binding Kind}" />
-                            </WrapPanel>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ListBox>
+                <materialDesign:Card>
+                    <TabControl
+                        materialDesign:ColorZoneAssist.Mode="PrimaryDark"
+                        Background="{StaticResource MaterialDesignDarkSeparatorBackground}"
+                        Foreground="{StaticResource MaterialDesignDarkForeground}"
+                        ItemsSource="{Binding AppViews}"
+                        SelectedItem="{Binding CurrentView, UpdateSourceTrigger=PropertyChanged}"
+                        Style="{StaticResource MaterialDesignNavigationRailTabControl}">
+                        <TabControl.ItemTemplate>
+                            <!--  This is the header template  -->
+                            <DataTemplate>
+                                <StackPanel Width="auto" Height="auto">
+                                    <materialDesign:PackIcon
+                                        Width="24"
+                                        Height="24"
+                                        HorizontalAlignment="Center"
+                                        Foreground="{StaticResource MaterialDesignDarkForeground}"
+                                        Kind="{Binding Kind}" />
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        Foreground="{StaticResource MaterialDesignDarkForeground}"
+                                        Text="{Binding Name}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </TabControl.ItemTemplate>
+                        <TabControl.ContentTemplate>
+                            <!--  This is the content template  -->
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Content}" />
+                            </DataTemplate>
+                        </TabControl.ContentTemplate>
+                    </TabControl>
+                </materialDesign:Card>
+
+
 
                 <ContentControl
                     Margin="0,0,0,0"
