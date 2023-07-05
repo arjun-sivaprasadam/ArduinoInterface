@@ -10,6 +10,7 @@ public class ViewModelBase : ObservableObject, IViewModelBase
 
     public RelayCommand? SetView { get; set; }
 }
+
 public interface IViewModelBase
 {
     public string? Name { get; set; }

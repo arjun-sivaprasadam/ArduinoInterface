@@ -17,7 +17,6 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Indigo.Named.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/UI/Buttons.xaml" />
-
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type vm:BlankPageViewModel}">

@@ -1,5 +1,4 @@
-﻿
-namespace ArduinoInterface.Lib;
+﻿namespace ArduinoInterface.Lib;
 
 public class ArduinoController
 {
