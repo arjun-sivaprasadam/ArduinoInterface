@@ -45,8 +45,8 @@
                     DockPanel.Dock="Top"
                     MouseDoubleClick="Window_MouseDoubleClick"
                     MouseDown="WindowDrag_MouseDown"
-                    Opacity="0.9">
-                    <DockPanel>
+                    Opacity="0.75">
+                    <DockPanel Margin="0,2,2,2">
                         <StackPanel Orientation="Horizontal">
                             <!--<materialDesign:PackIcon Kind="BatteryHigh" VerticalAlignment="Center" Width="28" Height="28" Margin="5,2,2,2" />-->
                             <TextBlock
@@ -89,6 +89,12 @@
                             Text="" />
                     </DockPanel>
                 </materialDesign:ColorZone>
+                <Separator
+                    MaxHeight="0.25"
+                    VerticalAlignment="Top"
+                    DockPanel.Dock="Top"
+                    Opacity="0.1"
+                    Style="{StaticResource MaterialDesignLightSeparator}" />
 
                 <!--  Page Space Model 3 ================================================================================================================================================  -->
 
