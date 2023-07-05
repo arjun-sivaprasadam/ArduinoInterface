@@ -126,12 +126,12 @@
                     </TabControl>
                 </materialDesign:Card>
 
-                <ContentControl
+                <!--<ContentControl
                     Margin="0,0,0,0"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     Content="{Binding CurrentView}"
-                    DockPanel.Dock="Top" />
+                    DockPanel.Dock="Top" />-->
             </DockPanel>
         </Grid>
     </Viewbox>
