@@ -43,9 +43,9 @@
             ClipToBounds="True"
             CornerRadius="20"
             DockPanel.Dock="Top">
-            <Border.Background>
-                <SolidColorBrush Opacity="0.2" Color="Gray"/>
-            </Border.Background>
+            <!--<Border.Background>
+                <SolidColorBrush Opacity="0.1" Color="White"/>
+            </Border.Background>-->
             <Grid x:Name="Grid" Margin="20">
                 <!--  Define the columns  -->
                 <Grid.ColumnDefinitions>
@@ -78,103 +78,105 @@
                 </Grid.RowDefinitions>
 
                 <!--  Add toggle buttons to each cell  -->
-                <TextBlock
+                <Image Source=".\..\Resources\bg.png" Margin="-60" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Grid.Row="0" Grid.RowSpan="20" Grid.ColumnSpan="20" ClipToBounds="True" Opacity="0.15"/>
+                
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="1"
                     HorizontalAlignment="Center"
                     Text="1"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="2"
                     HorizontalAlignment="Center"
                     Text="2"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="3"
                     HorizontalAlignment="Center"
                     Text="3"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="4"
                     HorizontalAlignment="Center"
                     Text="4"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="5"
                     HorizontalAlignment="Center"
                     Text="5"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="6"
                     HorizontalAlignment="Center"
                     Text="6"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="7"
                     HorizontalAlignment="Center"
                     Text="7"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="8"
                     HorizontalAlignment="Center"
                     Text="8"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="9"
                     HorizontalAlignment="Center"
                     Text="9"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="10"
                     HorizontalAlignment="Center"
                     Text="10"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="11"
                     HorizontalAlignment="Center"
                     Text="11"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="0"
                     Grid.Column="12"
                     HorizontalAlignment="Center"
                     Text="12"/>
 
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="1"
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     Text="1"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="2"
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     Text="2"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="3"
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     Text="3"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="4"
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     Text="4"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="5"
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     Text="5"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="6"
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     Text="6"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="7"
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     Text="7"/>
-                <TextBlock
+                <TextBlock FontWeight="Bold"
                     Grid.Row="8"
                     Grid.Column="0"
                     VerticalAlignment="Center"
@@ -185,583 +187,584 @@
                     Grid.Column="1"
                     Click="ToggleButton_Click"
                     Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="1"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
 
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="1"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="2"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
 
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="1"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="3"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
 
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="1"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="4"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
 
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="1"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="5"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
 
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="1"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="6"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
 
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="1"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="7"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
 
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="1"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="2"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="3"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="4"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="5"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="6"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="7"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="8"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="9"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="10"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="11"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
                 <ToggleButton
                     Grid.Row="8"
                     Grid.Column="12"
                     Click="ToggleButton_Click"
-                    Content="{materialDesign:PackIcon Kind=LedOff}"
+                    Content="{materialDesign:PackIcon Kind=LedOff}" Foreground="{StaticResource MaterialDesignDarkForeground}"
                     Style="{StaticResource MaterialDesignFlatPrimaryToggleButton}"/>
             </Grid>
         </Border>
