@@ -5,6 +5,7 @@ namespace ArduinoInterface.UI;
 public partial class App : Application
 {
     private readonly IServiceProvider _serviceProvider;
+
     public App()
     {
         ServiceCollection services = new ServiceCollection();

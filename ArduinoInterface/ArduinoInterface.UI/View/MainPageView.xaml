@@ -56,28 +56,28 @@
                                 VerticalAlignment="Bottom"
                                 FontSize="16"
                                 Foreground="{StaticResource MaterialDesignDarkForeground}"
-                                Text="Arduino Interface" />
+                                Text="Arduino Interface"/>
                             <TextBlock
                                 Padding="2"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Bottom"
                                 FontSize="12"
                                 Foreground="{StaticResource MaterialDesignDarkForeground}"
-                                Text="{Binding Version, StringFormat={}_{0}}" />
+                                Text="{Binding Version, StringFormat={}_{0}}"/>
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
                             <Button
                                 Click="Window_Minimize"
                                 Content="{materialDesign:PackIcon Kind=WindowMinimize}"
-                                Style="{StaticResource WindowButton}" />
+                                Style="{StaticResource WindowButton}"/>
                             <Button
                                 Click="Window_Maximize"
                                 Content="{materialDesign:PackIcon Kind=WindowMaximize}"
-                                Style="{StaticResource WindowButton}" />
+                                Style="{StaticResource WindowButton}"/>
                             <Button
                                 Click="Window_Close"
                                 Content="{materialDesign:PackIcon Kind=WindowClose}"
-                                Style="{StaticResource WindowCloseButton}" />
+                                Style="{StaticResource WindowCloseButton}"/>
                         </StackPanel>
 
                         <TextBlock
@@ -86,7 +86,7 @@
                             DockPanel.Dock="Top"
                             FontSize="12"
                             Foreground="{StaticResource MaterialDesignDarkForeground}"
-                            Text="" />
+                            Text=""/>
                     </DockPanel>
                 </materialDesign:ColorZone>
                 <Separator
@@ -94,7 +94,7 @@
                     VerticalAlignment="Top"
                     DockPanel.Dock="Top"
                     Opacity="0.1"
-                    Style="{StaticResource MaterialDesignLightSeparator}" />
+                    Style="{StaticResource MaterialDesignLightSeparator}"/>
 
                 <!--  Page Space Model 3 ================================================================================================================================================  -->
 
@@ -115,11 +115,11 @@
                                         Height="24"
                                         HorizontalAlignment="Center"
                                         Foreground="{StaticResource MaterialDesignDarkForeground}"
-                                        Kind="{Binding Kind}" />
+                                        Kind="{Binding Kind}"/>
                                     <TextBlock
                                         HorizontalAlignment="Center"
                                         Foreground="{StaticResource MaterialDesignDarkForeground}"
-                                        Text="{Binding Name}" />
+                                        Text="{Binding Name}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </TabControl.ItemTemplate>

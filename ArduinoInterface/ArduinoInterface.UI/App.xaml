@@ -13,21 +13,21 @@
             <ResourceDictionary.MergedDictionaries>
                 <!--  Material Design Application Resources  -->
                 <!--  Material Design Title Theme setting  -->
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Indigo.Named.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/UI/Buttons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Indigo.Named.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/UI/Buttons.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type vm:LedGridPageViewModel}">
-                <view:LedGridPageView />
+                <view:LedGridPageView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type vm:SettingsPageViewModel}">
-                <view:SettingsPageView />
+                <view:SettingsPageView/>
             </DataTemplate>
 
             <DataTemplate DataType="{x:Type vm:MainPageViewModel}">
-                <view:MainPageView />
+                <view:MainPageView/>
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>

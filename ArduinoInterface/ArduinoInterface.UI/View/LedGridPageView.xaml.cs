@@ -29,7 +29,6 @@ public partial class LedGridPageView : UserControl
 
             if (DataContext is not null)
                 (DataContext as LedGridPageViewModel)?.WritePattern?.Execute(new WritePatternParameters(row, column, packIcon.Kind == PackIconKind.LedOn));
-
         }
     }
 }

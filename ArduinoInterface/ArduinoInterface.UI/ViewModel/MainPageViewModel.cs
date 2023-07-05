@@ -1,4 +1,5 @@
 ﻿namespace ArduinoInterface.UI.ViewModel;
+
 public class MainPageViewModel : ObservableObject
 {
     private IViewModelBase? _currentView;
@@ -8,7 +9,6 @@ public class MainPageViewModel : ObservableObject
 
     public MainPageViewModel()
     {
-        
     }
 
     public MainPageViewModel(IEnumerable<IViewModelBase> viewModels)

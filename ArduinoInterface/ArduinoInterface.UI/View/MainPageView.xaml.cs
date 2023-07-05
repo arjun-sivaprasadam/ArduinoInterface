@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+
 using System.Diagnostics;
 
 namespace ArduinoInterface.UI.View;

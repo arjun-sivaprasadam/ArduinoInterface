@@ -6,26 +6,26 @@
     xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <Style x:Key="WindowCloseButton" TargetType="{x:Type ButtonBase}">
-        <Setter Property="Opacity" Value="0.75" />
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}" />
-        <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="TextBlock.FontWeight" Value="Medium" />
-        <Setter Property="TextBlock.FontSize" Value="14" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Padding" Value="16,4,16,4" />
-        <Setter Property="Height" Value="32" />
-        <Setter Property="wpf:ElevationAssist.Elevation" Value="Dp4" />
-        <Setter Property="wpf:ButtonAssist.CornerRadius" Value="2" />
-        <Setter Property="wpf:RippleAssist.Feedback" Value="White" />
-        <Setter Property="wpf:ButtonProgressAssist.IndicatorForeground" Value="{StaticResource MaterialDesignDarkForeground}" />
-        <Setter Property="wpf:ButtonProgressAssist.IndicatorBackground" Value="{StaticResource MaterialDesignLightForeground}" />
-        <Setter Property="wpf:ButtonProgressAssist.IsIndicatorVisible" Value="False" />
-        <Setter Property="wpf:ButtonProgressAssist.Opacity" Value=".5" />
+        <Setter Property="Opacity" Value="0.75"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="TextBlock.FontWeight" Value="Medium"/>
+        <Setter Property="TextBlock.FontSize" Value="14"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="16,4,16,4"/>
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="wpf:ElevationAssist.Elevation" Value="Dp4"/>
+        <Setter Property="wpf:ButtonAssist.CornerRadius" Value="2"/>
+        <Setter Property="wpf:RippleAssist.Feedback" Value="White"/>
+        <Setter Property="wpf:ButtonProgressAssist.IndicatorForeground" Value="{StaticResource MaterialDesignDarkForeground}"/>
+        <Setter Property="wpf:ButtonProgressAssist.IndicatorBackground" Value="{StaticResource MaterialDesignLightForeground}"/>
+        <Setter Property="wpf:ButtonProgressAssist.IsIndicatorVisible" Value="False"/>
+        <Setter Property="wpf:ButtonProgressAssist.Opacity" Value=".5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ButtonBase}">
@@ -37,7 +37,7 @@
                                     Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
-                                    CornerRadius="{Binding Path=(wpf:ButtonAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                                    CornerRadius="{Binding Path=(wpf:ButtonAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}"/>
                             </Grid>
                         </AdornerDecorator>
                         <wpf:Ripple
@@ -51,26 +51,26 @@
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                             <wpf:Ripple.Clip>
                                 <MultiBinding Converter="{StaticResource BorderClipConverter}">
-                                    <Binding ElementName="border" Path="ActualWidth" />
-                                    <Binding ElementName="border" Path="ActualHeight" />
-                                    <Binding ElementName="border" Path="CornerRadius" />
-                                    <Binding ElementName="border" Path="BorderThickness" />
+                                    <Binding ElementName="border" Path="ActualWidth"/>
+                                    <Binding ElementName="border" Path="ActualHeight"/>
+                                    <Binding ElementName="border" Path="CornerRadius"/>
+                                    <Binding ElementName="border" Path="BorderThickness"/>
                                 </MultiBinding>
                             </wpf:Ripple.Clip>
                         </wpf:Ripple>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True" />
-                            <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}" />
-                            <Setter Property="Background" Value="#FFAA0303" />
-                            <Setter Property="Opacity" Value="1.0" />
+                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True"/>
+                            <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}"/>
+                            <Setter Property="Background" Value="#FFAA0303"/>
+                            <Setter Property="Opacity" Value="1.0"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="true">
-                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True" />
+                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Opacity" Value="0.25" />
+                            <Setter Property="Opacity" Value="0.25"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -79,26 +79,26 @@
     </Style>
 
     <Style x:Key="WindowButton" TargetType="{x:Type ButtonBase}">
-        <Setter Property="Opacity" Value="0.75" />
-        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
-        <Setter Property="Background" Value="Transparent" />
-        <Setter Property="BorderBrush" Value="Transparent" />
-        <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}" />
-        <Setter Property="Cursor" Value="Hand" />
-        <Setter Property="TextBlock.FontWeight" Value="Medium" />
-        <Setter Property="TextBlock.FontSize" Value="14" />
-        <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="Padding" Value="16,4,16,4" />
-        <Setter Property="Height" Value="32" />
-        <Setter Property="wpf:ElevationAssist.Elevation" Value="Dp4" />
-        <Setter Property="wpf:ButtonAssist.CornerRadius" Value="2" />
-        <Setter Property="wpf:RippleAssist.Feedback" Value="White" />
-        <Setter Property="wpf:ButtonProgressAssist.IndicatorForeground" Value="{StaticResource MaterialDesignDarkForeground}" />
-        <Setter Property="wpf:ButtonProgressAssist.IndicatorBackground" Value="{StaticResource MaterialDesignLightForeground}" />
-        <Setter Property="wpf:ButtonProgressAssist.IsIndicatorVisible" Value="False" />
-        <Setter Property="wpf:ButtonProgressAssist.Opacity" Value=".4" />
+        <Setter Property="Opacity" Value="0.75"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="TextBlock.FontWeight" Value="Medium"/>
+        <Setter Property="TextBlock.FontSize" Value="14"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="16,4,16,4"/>
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="wpf:ElevationAssist.Elevation" Value="Dp4"/>
+        <Setter Property="wpf:ButtonAssist.CornerRadius" Value="2"/>
+        <Setter Property="wpf:RippleAssist.Feedback" Value="White"/>
+        <Setter Property="wpf:ButtonProgressAssist.IndicatorForeground" Value="{StaticResource MaterialDesignDarkForeground}"/>
+        <Setter Property="wpf:ButtonProgressAssist.IndicatorBackground" Value="{StaticResource MaterialDesignLightForeground}"/>
+        <Setter Property="wpf:ButtonProgressAssist.IsIndicatorVisible" Value="False"/>
+        <Setter Property="wpf:ButtonProgressAssist.Opacity" Value=".4"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ButtonBase}">
@@ -110,7 +110,7 @@
                                     Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
                                     BorderThickness="{TemplateBinding BorderThickness}"
-                                    CornerRadius="{Binding Path=(wpf:ButtonAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}" />
+                                    CornerRadius="{Binding Path=(wpf:ButtonAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}"/>
                             </Grid>
                         </AdornerDecorator>
                         <wpf:Ripple
@@ -124,26 +124,26 @@
                             SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
                             <wpf:Ripple.Clip>
                                 <MultiBinding Converter="{StaticResource BorderClipConverter}">
-                                    <Binding ElementName="border" Path="ActualWidth" />
-                                    <Binding ElementName="border" Path="ActualHeight" />
-                                    <Binding ElementName="border" Path="CornerRadius" />
-                                    <Binding ElementName="border" Path="BorderThickness" />
+                                    <Binding ElementName="border" Path="ActualWidth"/>
+                                    <Binding ElementName="border" Path="ActualHeight"/>
+                                    <Binding ElementName="border" Path="CornerRadius"/>
+                                    <Binding ElementName="border" Path="BorderThickness"/>
                                 </MultiBinding>
                             </wpf:Ripple.Clip>
                         </wpf:Ripple>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True" />
-                            <Setter Property="Background" Value="{StaticResource MaterialDesignDarkSeparatorBackground}" />
-                            <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}" />
-                            <Setter Property="Opacity" Value="1.0" />
+                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True"/>
+                            <Setter Property="Background" Value="{StaticResource MaterialDesignDarkSeparatorBackground}"/>
+                            <Setter Property="Foreground" Value="{StaticResource MaterialDesignDarkForeground}"/>
+                            <Setter Property="Opacity" Value="1.0"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="true">
-                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True" />
+                            <Setter TargetName="border" Property="wpf:ShadowAssist.Darken" Value="True"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
-                            <Setter Property="Opacity" Value="0.1" />
+                            <Setter Property="Opacity" Value="0.1"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
