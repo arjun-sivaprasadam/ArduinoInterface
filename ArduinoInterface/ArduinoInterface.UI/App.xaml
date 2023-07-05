@@ -2,11 +2,34 @@
     x:Class="ArduinoInterface.UI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:AUI="clr-namespace:ArduinoInterface.UI"
     xmlns:converter="clr-namespace:ArduinoInterface.UI.Converters"
-    xmlns:local="clr-namespace:ArduinoInterface.UI">
+    xmlns:materialdesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:model="clr-namespace:ArduinoInterface.UI.Model"
+    xmlns:view="clr-namespace:ArduinoInterface.UI.View"
+    xmlns:vm="clr-namespace:ArduinoInterface.UI.ViewModel"
+    StartupUri="View\MainView.xaml">
     <Application.Resources>
         <ResourceDictionary>
-            <converter:BoolToColorConverter x:Key="BoolToColorConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <!--  Material Design Application Resources  -->
+                <!--  Material Design Title Theme setting  -->
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/MaterialDesignColor.Indigo.Named.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/UI/Progressbars.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/UI/Buttons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/UI/Slider.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/UI/ScrollViewer.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/UI/TextBlock.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type vm:BlankPageViewModel}">
+                <view:BlankPageView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:MainViewModel}">
+                <view:MainView />
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

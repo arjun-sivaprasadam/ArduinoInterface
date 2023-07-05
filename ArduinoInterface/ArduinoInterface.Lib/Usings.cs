@@ -5,4 +5,4 @@ global using System.Text;
 global using System.Threading.Tasks;
 global using System.IO.Ports;
 
-global using ArduinoInterface.Helper;
+global using ArduinoInterface.Lib;
