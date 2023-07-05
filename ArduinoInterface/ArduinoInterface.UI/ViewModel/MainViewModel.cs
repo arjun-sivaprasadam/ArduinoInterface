@@ -1,6 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿namespace ArduinoInterface.UI.ViewModel;
 
-namespace ArduinoInterface.UI.ViewModel;
 public class MainViewModel : ObservableObject
 {
     private static readonly MainViewModel _instance = new MainViewModel();

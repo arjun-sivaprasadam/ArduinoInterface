@@ -16,10 +16,14 @@
     d:DataContext="{d:DesignInstance Type=vm:MainViewModel,
                                      IsDesignTimeCreatable=True}"
     AllowsTransparency="True"
+    Background="{StaticResource MaterialDesignDarkBackground}"
+    BorderBrush="{StaticResource MaterialDesignShadowBrush}"
     BorderThickness="1"
+    FontFamily="{StaticResource MaterialDesignFont}"
     ResizeMode="CanResizeWithGrip"
     TextElement.FontSize="13"
     TextElement.FontWeight="Regular"
+    TextElement.Foreground="{StaticResource MaterialDesignDarkForeground}"
     TextOptions.TextFormattingMode="Ideal"
     TextOptions.TextRenderingMode="Auto"
     UseLayoutRounding="True"
@@ -49,14 +53,14 @@
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Bottom"
                                 FontSize="16"
-                                Foreground="{DynamicResource MaterialDesignBody}"
+                                Foreground="{StaticResource MaterialDesignDarkForeground}"
                                 Text="Arduino Interface" />
                             <TextBlock
                                 Padding="2"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Bottom"
                                 FontSize="12"
-                                Foreground="{DynamicResource MaterialDesignBody}"
+                                Foreground="{StaticResource MaterialDesignDarkForeground}"
                                 Text="{Binding Version, StringFormat={}_{0}}" />
                         </StackPanel>
                         <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
@@ -79,7 +83,7 @@
                             VerticalAlignment="Center"
                             DockPanel.Dock="Top"
                             FontSize="12"
-                            Foreground="{DynamicResource MaterialDesignBody}"
+                            Foreground="{StaticResource MaterialDesignDarkForeground}"
                             Text="" />
                     </DockPanel>
                 </materialDesign:ColorZone>
@@ -88,7 +92,7 @@
                     VerticalAlignment="Top"
                     DockPanel.Dock="Top"
                     Opacity="0.2"
-                    Style="{DynamicResource MaterialDesignLightSeparator}" />
+                    Style="{StaticResource MaterialDesignLightSeparator}" />
 
                 <!--  Page Space Model 3 ================================================================================================================================================  -->
 
