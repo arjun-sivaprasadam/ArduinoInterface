@@ -123,12 +123,6 @@
                                 </StackPanel>
                             </DataTemplate>
                         </TabControl.ItemTemplate>
-                        <TabControl.ContentTemplate>
-                            <!--  This is the content template  -->
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Content}" />
-                            </DataTemplate>
-                        </TabControl.ContentTemplate>
                     </TabControl>
                 </materialDesign:Card>
 
