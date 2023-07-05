@@ -8,7 +8,13 @@ public partial class MainView : Window
     public MainView()
     {
         InitializeComponent();
-        DataContext ??= new MainViewModel();
+        //DataContext ??= new MainViewModel();
+    }
+
+    public MainView(MainViewModel viewModel)
+    {
+        InitializeComponent();
+        DataContext = viewModel;
     }
 
     private void WindowDrag_MouseDown(object sender, MouseButtonEventArgs e)

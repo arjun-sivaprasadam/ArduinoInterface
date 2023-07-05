@@ -6,4 +6,10 @@ public partial class BlankPageView : UserControl
     {
         InitializeComponent();
     }
+    public BlankPageView(BlankPageViewModel viewModel)
+    {
+        InitializeComponent();
+        DataContext = viewModel;
+    }
+
 }
