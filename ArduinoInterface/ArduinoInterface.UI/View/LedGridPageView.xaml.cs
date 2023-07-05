@@ -1,4 +1,6 @@
-﻿namespace ArduinoInterface.UI.View;
+﻿using ArduinoInterface.Lib;
+
+namespace ArduinoInterface.UI.View;
 
 public partial class LedGridPageView : UserControl
 {
@@ -26,8 +28,7 @@ public partial class LedGridPageView : UserControl
             PackIcon packIcon = (PackIcon)toggleButton.Content;
             packIcon.Kind = packIcon.Kind == PackIconKind.LedOn ? PackIconKind.LedOff : PackIconKind.LedOn;
 
-            if (DataContext is not null)
-                (DataContext as LedGridPageViewModel)?.WritePattern?.Execute(new WritePatternParameters(row, column, packIcon.Kind == PackIconKind.LedOn));
+            ArduinoController.SendLedUpdates(row, column, packIcon.Kind == PackIconKind.LedOn);
         }
     }
 }

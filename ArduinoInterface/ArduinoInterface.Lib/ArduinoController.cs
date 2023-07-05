@@ -40,7 +40,6 @@ public static class ArduinoController
     {
         if (_serialPort is null) ResetPort();
 
-        LEDStateManager.UpdateLedArray(row - 1, col - 1, state);
-        LEDStateManager.SendCommand(_serialPort, ArduinoCommand.ArduinoLEDMatrixUpdate);
+        LEDStateManager.UpdateLedArray(_serialPort, row - 1, col - 1, state);
     }
 }
