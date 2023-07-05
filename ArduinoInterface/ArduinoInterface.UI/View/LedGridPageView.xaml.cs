@@ -26,6 +26,10 @@ public partial class LedGridPageView : UserControl
             // Toggle the icon
             PackIcon packIcon = (PackIcon)toggleButton.Content;
             packIcon.Kind = packIcon.Kind == PackIconKind.LedOn ? PackIconKind.LedOff : PackIconKind.LedOn;
+
+            if (DataContext is not null)
+                (DataContext as LedGridPageViewModel)?.WritePattern?.Execute(new WritePatternParameters(row, column, packIcon.Kind == PackIconKind.LedOn));
+
         }
     }
 }

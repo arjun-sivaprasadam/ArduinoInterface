@@ -2,8 +2,8 @@
 
 public class LedGridPageViewModel : ViewModelBase
 {
-    private RelayCommand? _writePattern;
-    public RelayCommand? WritePattern
+    private RelayCommand<WritePatternParameters>? _writePattern;
+    public RelayCommand<WritePatternParameters>? WritePattern
     {
         get => _writePattern;
         private set => SetProperty(ref _writePattern, value);
@@ -15,11 +15,26 @@ public class LedGridPageViewModel : ViewModelBase
         Kind = PackIconKind.LightbulbGroupOutline;
         Type = typeof(LedGridPageViewModel);
 
-        WritePattern = new RelayCommand(WritePatternCommand);
+        WritePattern = new RelayCommand<WritePatternParameters>(WritePatternCommand);
     }
 
-    private void WritePatternCommand(object parameter)
+    private void WritePatternCommand(WritePatternParameters parameter)
     {
+        Console.WriteLine("");
+    }
+}
 
+public class WritePatternParameters
+{
+    public int Row { get; set; }
+    public int Col { get; set; }
+
+    public bool IsToggled { get; set; }
+
+    public WritePatternParameters(int row, int col, bool isToggled)
+    {
+        Row = row;
+        Col = col;
+        IsToggled = isToggled;
     }
 }
