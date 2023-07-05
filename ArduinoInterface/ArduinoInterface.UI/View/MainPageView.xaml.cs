@@ -3,15 +3,15 @@ using System.Diagnostics;
 
 namespace ArduinoInterface.UI.View;
 
-public partial class MainView : Window
+public partial class MainPageView : Window
 {
-    public MainView()
+    public MainPageView()
     {
         InitializeComponent();
-        //DataContext ??= new MainViewModel();
+        //DataContext ??= new MainPageViewModel();
     }
 
-    public MainView(MainViewModel viewModel)
+    public MainPageView(MainPageViewModel viewModel)
     {
         InitializeComponent();
         DataContext = viewModel;

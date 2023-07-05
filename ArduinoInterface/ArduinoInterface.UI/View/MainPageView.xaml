@@ -1,5 +1,5 @@
 ﻿<Window
-    x:Class="ArduinoInterface.UI.View.MainView"
+    x:Class="ArduinoInterface.UI.View.MainPageView"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:AUI="clr-namespace:ArduinoInterface.UI"
@@ -13,7 +13,7 @@
     Title="ArduinoInterface"
     Width="1600"
     Height="900"
-    d:DataContext="{d:DesignInstance Type=vm:MainViewModel,
+    d:DataContext="{d:DesignInstance Type=vm:MainPageViewModel,
                                      IsDesignTimeCreatable=True}"
     AllowsTransparency="True"
     Background="{StaticResource MaterialDesignDarkBackground}"

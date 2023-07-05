@@ -1,4 +1,6 @@
-﻿namespace ArduinoInterface.UI;
+﻿using Microsoft.Extensions.DependencyInjection;
+
+namespace ArduinoInterface.UI;
 
 public partial class App : Application
 {
@@ -13,24 +15,33 @@ public partial class App : Application
     private void ConfigureServices(ServiceCollection services)
     {
         // Register your services here
-        services.AddSingleton<MainView>(provider => new MainView()
+        services.AddSingleton<MainPageView>(provider => new MainPageView()
         {
-            DataContext = provider.GetService<MainViewModel>()
+            DataContext = provider.GetService<MainPageViewModel>()
         });
-        services.AddSingleton<BlankPageView>(provider => new BlankPageView()
+        services.AddSingleton<LedGridPageView>(provider => new LedGridPageView()
         {
-            DataContext = provider.GetService<BlankPageViewModel>()
+            DataContext = provider.GetService<LedGridPageViewModel>()
+        });
+        services.AddSingleton<SettingsPageView>(provider => new SettingsPageView()
+        {
+            DataContext = provider.GetService<SettingsPageViewModel>()
         });
 
-        services.AddSingleton<MainView>();
-        services.AddSingleton<BlankPageView>();
-        services.AddSingleton<MainViewModel>();
-        services.AddSingleton<BlankPageViewModel>();
+        // Register your services here
+        services.AddSingleton<MainPageView>();
+        services.AddSingleton<LedGridPageView>();
+        services.AddSingleton<SettingsPageView>();
+
+        services.AddSingleton<MainPageViewModel>();
+        services.AddSingleton<IViewModelBase, LedGridPageViewModel>();
+        services.AddSingleton<IViewModelBase, SettingsPageViewModel>();
     }
 
     protected override void OnStartup(StartupEventArgs e)
     {
-        MainView mainWindowView = _serviceProvider.GetRequiredService<MainView>();
+        MainPageView mainWindowView = _serviceProvider.GetRequiredService<MainPageView>();
+        mainWindowView.DataContext = _serviceProvider.GetRequiredService<MainPageViewModel>();
         mainWindowView.Show();
     }
 }

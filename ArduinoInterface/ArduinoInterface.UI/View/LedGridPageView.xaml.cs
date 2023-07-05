@@ -1,15 +1,15 @@
 ﻿namespace ArduinoInterface.UI.View;
 
-public partial class BlankPageView : UserControl
+public partial class LedGridPageView : UserControl
 {
-    public BlankPageView()
+    public LedGridPageView()
     {
         InitializeComponent();
     }
-    public BlankPageView(BlankPageViewModel viewModel)
+
+    public LedGridPageView(LedGridPageViewModel viewModel)
     {
         InitializeComponent();
         DataContext = viewModel;
     }
-
 }

@@ -18,12 +18,16 @@
                 <ResourceDictionary Source="pack://application:,,,/UI/Buttons.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
-            <DataTemplate DataType="{x:Type vm:BlankPageViewModel}">
-                <view:BlankPageView />
+            <DataTemplate DataType="{x:Type vm:LedGridPageViewModel}">
+                <view:LedGridPageView />
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type vm:MainViewModel}">
-                <view:MainView />
+            <DataTemplate DataType="{x:Type vm:SettingsPageViewModel}">
+                <view:SettingsPageView />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:MainPageViewModel}">
+                <view:MainPageView />
             </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
