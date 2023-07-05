@@ -1,4 +1,6 @@
-﻿namespace ArduinoInterface.UI.ViewModel;
+﻿using ArduinoInterface.Lib;
+
+namespace ArduinoInterface.UI.ViewModel;
 
 public class LedGridPageViewModel : ViewModelBase
 {
@@ -36,5 +38,7 @@ public class WritePatternParameters
         Row = row;
         Col = col;
         IsToggled = isToggled;
+
+        ArduinoController.SendLedUpdates(row, col, isToggled);
     }
 }

@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ArduinoInterface.Lib\ArduinoInterface.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\bg.png" />
   </ItemGroup>
 
