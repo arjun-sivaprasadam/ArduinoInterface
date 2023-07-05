@@ -6,7 +6,7 @@ public static class ArduinoController
 {
     public static SerialPort? _serialPort = null;
 
-    private static int _baudRate;
+    private static int _baudRate = 115200;
     public static int BaudRate
     {
         get => _baudRate;
@@ -17,7 +17,7 @@ public static class ArduinoController
         }
     }
 
-    private static string _port = "COM3";
+    private static string _port = "COM21";
     public static string Port
     {
         get => _port;
@@ -36,26 +36,11 @@ public static class ArduinoController
         _serialPort = new SerialPort(Port, BaudRate);
     }
 
-    public static Task<string?> ReadLineAsync(this SerialPort serialPort, CancellationToken cancellationToken = default)
+    public static void SendLedUpdates(int row, int col, bool state)
     {
-        return Task.Run(() =>
-        {
-            while (!cancellationToken.IsCancellationRequested)
-            {
-                if (serialPort.BytesToRead > 0)
-                {
-                    return serialPort.ReadLine();
-                }
-            }
+        if (_serialPort is null) ResetPort();
 
-            cancellationToken.ThrowIfCancellationRequested();
-            return null;
-        }, cancellationToken);
-    }
-
-    public static async Task SendLedUpdates(int row, int col, bool state)
-    {
-        LEDStateManager.UpdateLedArray(row, col, state);
-        await LEDStateManager.SendCommandAsync(_serialPort, ArduinoCommand.ArduinoLEDMatrixUpdate);
+        LEDStateManager.UpdateLedArray(row - 1, col - 1, state);
+        LEDStateManager.SendCommand(_serialPort, ArduinoCommand.ArduinoLEDMatrixUpdate);
     }
 }

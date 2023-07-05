@@ -3,7 +3,7 @@
 namespace ArduinoInterface.Lib;
 public static class LEDStateManager
 {
-    private static uint[] _ledState { get; } = Array.Empty<uint>();
+    private static uint[] _ledState { get; } = new uint[3];
 
     public static void UpdateLedArray(int row, int col, bool value)
     {
@@ -14,15 +14,17 @@ public static class LEDStateManager
 
         int index = bitPos / bitsStored;
         int position = bitPos % bitsStored;
-        _ledState[index] = (uint)(state << position);
+        _ledState[index] = (uint)(state << (position));
     }
 
-    public static async Task<bool> SendCommandAsync(SerialPort? serialPort, ArduinoCommand command)
+    public static bool SendCommand(SerialPort? serialPort, ArduinoCommand command)
     {
         bool result = false;
         if (serialPort == null) return false;
         try
         {
+            if (!serialPort.IsOpen) serialPort.Open();
+
             byte[] commandBytes = BitConverter.GetBytes((int)command);
             serialPort.Write(commandBytes, 0, commandBytes.Length);
 
@@ -36,9 +38,6 @@ public static class LEDStateManager
                     // SendCommand2(serialPort);
                     break;
             }
-            var cts = new CancellationTokenSource(TimeSpan.FromSeconds(2));
-            string? response = await serialPort.ReadLineAsync(cts.Token);
-            result = response?.Trim().ToLower() == "done";
         }
         catch (Exception ex)
         {

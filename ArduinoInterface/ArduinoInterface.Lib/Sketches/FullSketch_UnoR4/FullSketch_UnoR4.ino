@@ -58,20 +58,20 @@ void loop() {
 
 void processSerialCommand() {
   if (Serial.available() >= sizeof(int)) {
-    // Read the incoming command
-    int command;
-    Serial.readBytes((char*)&command, sizeof(int));
+    // // Read the incoming command
+    // int command;
+    // Serial.readBytes((char*)&command, sizeof(int));
 
-    // Use a switch-case to handle the command
-    switch (command) {
-      case 1:  // ArduinoLEDMatrixUpdate
+    // // Use a switch-case to handle the command
+    // switch (command) {
+    //   case 1:  // ArduinoLEDMatrixUpdate
         handleMatrixUpdateCommand();
-        break;
-      case 2:  // Command2
-        // handle command 2
-        break;
-        // add cases for more commands up to 12...
-    }
+    //     break;
+    //   case 2:  // Command2
+    //     // handle command 2
+    //     break;
+    //     // add cases for more commands up to 12...
+    // }
   }
 }
 
