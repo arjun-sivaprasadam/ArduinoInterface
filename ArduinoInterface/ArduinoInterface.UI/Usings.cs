@@ -26,4 +26,3 @@ global using ArduinoInterface.UI.View;
 global using ArduinoInterface.UI.Model;
 global using ArduinoInterface.UI.ViewModel;
 global using ArduinoInterface.UI.Converters;
-

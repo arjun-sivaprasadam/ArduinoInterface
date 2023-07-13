@@ -81,19 +81,21 @@
                       Grid.RowSpan="20"
                       Grid.Column="0"
                       Grid.ColumnSpan="20"
-                      HorizontalAlignment="Stretch"
                       Margin="-55"
+                      HorizontalAlignment="Stretch"
                       VerticalAlignment="Stretch">
 
                     <!--  Filled rectangle  -->
-                    <Rectangle Grid.Row="0" Fill="{Binding Source={StaticResource White}, Converter={StaticResource ColorToShadedGradientConverter}, ConverterParameter=0.3}" Opacity="0.01" ClipToBounds="True"/>
+                    <Rectangle Grid.Row="0"
+                               Fill="{Binding Source={StaticResource White}, Converter={StaticResource ColorToShadedGradientConverter}, ConverterParameter=0.3}"
+                               Opacity="0.01"
+                               ClipToBounds="True"/>
 
                     <!--  Image  -->
                     <Image Grid.Row="1"
                            Source=".\..\Resources\bg.png"
                            ClipToBounds="True"
                            Opacity="0.15"/>
-
                 </Grid>
 
                 <!--  Add toggle buttons to each cell  -->

@@ -1,6 +1,7 @@
 ﻿using System.IO.Ports;
 
 namespace ArduinoInterface.Lib;
+
 public static class LEDStateManager
 {
     private static uint[] _ledState { get; } = new uint[3];
@@ -12,7 +13,8 @@ public static class LEDStateManager
         {
             if (!serialPort.IsOpen) serialPort.Open();
 
-            Task.Run(() => {
+            Task.Run(() =>
+            {
                 serialPort.Write(new byte[] { (byte)row, (byte)col }, 0, 2);
             });
         }
