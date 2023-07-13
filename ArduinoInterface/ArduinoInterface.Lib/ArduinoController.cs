@@ -17,7 +17,7 @@ public static class ArduinoController
         }
     }
 
-    private static string _port = "COM21";
+    private static string _port = "COM4";
     public static string Port
     {
         get => _port;

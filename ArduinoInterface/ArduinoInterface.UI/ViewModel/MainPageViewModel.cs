@@ -3,7 +3,6 @@
 public class MainPageViewModel : ObservableObject
 {
     private IViewModelBase? _currentView;
-    private short _selectedIndex;
 
     public static string Version { get => "_1.0.0.0"; }
 
@@ -21,12 +20,6 @@ public class MainPageViewModel : ObservableObject
 
     public ObservableCollection<IViewModelBase> AppViews { get; }
 
-    public short SelectedIndex
-    {
-        get => _selectedIndex;
-        set => SetProperty(ref _selectedIndex, value);
-    }
-
     public IViewModelBase? CurrentView
     {
         get => _currentView;
@@ -34,7 +27,6 @@ public class MainPageViewModel : ObservableObject
         {
             if (value == null) return;
             SetProperty(ref _currentView, value);
-            SelectedIndex = (short)AppViews.IndexOf(_currentView);
         }
     }
 
