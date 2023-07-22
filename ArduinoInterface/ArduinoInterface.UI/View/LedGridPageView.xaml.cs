@@ -1,0 +1,34 @@
+﻿using ArduinoInterface.Lib;
+
+namespace ArduinoInterface.UI.View;
+
+public partial class LedGridPageView : UserControl
+{
+    public LedGridPageView()
+    {
+        InitializeComponent();
+    }
+
+    public LedGridPageView(LedGridPageViewModel viewModel)
+    {
+        InitializeComponent();
+        DataContext = viewModel;
+    }
+
+    private void ToggleButton_Click(object sender, RoutedEventArgs e)
+    {
+        if (sender is ToggleButton toggleButton)
+        {
+            int column = Grid.GetColumn(toggleButton);
+            int row = Grid.GetRow(toggleButton);
+            Console.WriteLine($"Clicked button at column {column}, row {row}");
+
+            // Toggle the icon
+            toggleButton.Background = new SolidColorBrush(Colors.Red) { Opacity = 0.3 };
+            PackIcon packIcon = (PackIcon)toggleButton.Content;
+            packIcon.Kind = packIcon.Kind == PackIconKind.LedOn ? PackIconKind.LedOff : PackIconKind.LedOn;
+
+            ArduinoController.SendLedUpdates(row, column, packIcon.Kind == PackIconKind.LedOn);
+        }
+    }
+}
